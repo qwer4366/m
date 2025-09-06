@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mu3 - ساحة النماذج اللغوية المتقدمة</title>
+    <meta name="description" content="منصة مفتوحة المصدر لتقييم ومقارنة النماذج اللغوية الكبيرة مع دعم مجاني لـ GPT-5 و Claude و DALL-E عبر Puter.js" />
+    <meta name="author" content="Mu3 killer piaaz" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="/logo/photo_٢٠٢٥-٠٨-١٥_١٥-٥٥-٤٠ (2).jpg" />
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="/logo/photo_٢٠٢٥-٠٨-١٥_١٥-٥٥-٤٠ (2).jpg" />
+    <link rel="shortcut icon" type="image/jpeg" href="/logo/photo_٢٠٢٥-٠٨-١٥_١٥-٥٥-٤٠ (2).jpg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo/photo_٢٠٢٥-٠٨-١٥_١٥-٥٥-٤٠ (2).jpg" />
+
+    <meta property="og:title" content="Mu3 killer piaaz - ساحة النماذج اللغوية المتقدمة" />
+    <meta property="og:description" content="منصة مفتوحة المصدر لتقييم ومقارنة النماذج اللغوية الكبيرة مع دعم مجاني لـ GPT-5 و Claude و DALL-E" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/logo/photo_٢٠٢٥-٠٨-١٥_١٥-٥٥-٤٠ (2).jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@mu3_killer_piaaz" />
+    <meta name="twitter:image" content="/logo/photo_٢٠٢٥-٠٨-١٥_١٥-٥٥-٤٠ (2).jpg" />
+    
+    <!-- Puter.js Integration -->
+    <script src="https://js.puter.com/v2/"></script>
+    <script>
+      // Initialize Puter.js when loaded
+      window.addEventListener('load', function() {
+        if (window.puter) {
+          console.log('Puter.js loaded successfully - AI features available');
+          // Set global flag for components to know Puter is ready
+          window.puterReady = true;
+          window.dispatchEvent(new Event('puterReady'));
+        } else {
+          console.warn('Puter.js not available - using fallback mode');
+          window.puterReady = false;
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

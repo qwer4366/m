@@ -1,0 +1,17 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="40" height="40" rx="8" fill="url(#gradient)"/>
+  <!-- Suit jacket -->
+  <path d="M8 16L12 14V12C12 10 14 8 20 8C26 8 28 10 28 12V14L32 16V32H8V16Z" fill="#1a1a1a"/>
+  <!-- Shirt -->
+  <path d="M14 14V32H26V14C26 12 24 10 20 10C16 10 14 12 14 14Z" fill="white"/>
+  <!-- Tie -->
+  <path d="M18 14L20 12L22 14V28L20 30L18 28V14Z" fill="#333"/>
+  <!-- Collar -->
+  <path d="M16 12L20 10L24 12L22 14L20 12L18 14L16 12Z" fill="white"/>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
