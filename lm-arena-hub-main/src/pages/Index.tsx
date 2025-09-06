@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Header } from "@/components/Header";
 import { BattleInterface } from "@/components/BattleInterface";
 import { ChatInterface } from "@/components/ChatInterface";
+import { VisionAnalyzer } from "@/components/VisionAnalyzer";
 import { ImageGenerator } from "@/components/ImageGenerator";
 import { ModelSelector, type Model } from "@/components/ModelSelector";
 import { Leaderboard } from "@/components/Leaderboard";
@@ -13,7 +14,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Toaster } from "@/components/ui/toaster";
-import { Sparkles, Users, BarChart3, TrendingUp, ArrowRight, Zap, Shield, Globe, MessageCircle, Swords, Image } from "lucide-react";
+import { Sparkles, Users, BarChart3, TrendingUp, ArrowRight, Zap, Shield, Globe, MessageCircle, Swords, Image, Eye } from "lucide-react";
 
 const Index = () => {
   const [selectedModel, setSelectedModel] = useState<Model | null>(null);
@@ -136,7 +137,7 @@ const Index = () => {
 
         {/* Main Features Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto">
+          <TabsList className="grid w-full grid-cols-4 max-w-lg mx-auto">
             <TabsTrigger value="battle" className="flex items-center gap-2">
               <Swords className="w-4 h-4" />
               المعارك
@@ -149,10 +150,14 @@ const Index = () => {
               <Image className="w-4 h-4" />
               الصور
             </TabsTrigger>
+            <TabsTrigger value="vision" className="flex items-center gap-2">
+              <Eye className="w-4 h-4" />
+              تحليل الصور
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="battle" className="mt-8">
-            <BattleInterface 
+            <BattleInterface
               onBattleComplete={(result) => {
                 console.log("Battle completed:", result);
               }}
@@ -165,6 +170,10 @@ const Index = () => {
 
           <TabsContent value="image" className="mt-8">
             <ImageGenerator />
+          </TabsContent>
+
+          <TabsContent value="vision" className="mt-8">
+            <VisionAnalyzer />
           </TabsContent>
         </Tabs>
 
